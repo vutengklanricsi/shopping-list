@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
+const list = require('../services/list');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', (req, res) => {
+  res.render('/shoppinglist', {
+    title: 'Shopping List',
+    shoppinglist: list,
+  })
+  console.log(list)
 });
 
 module.exports = router;

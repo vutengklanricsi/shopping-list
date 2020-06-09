@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('shoppingList', 'user', '123456', {
+const sequelize = new Sequelize('shoppingList', 'Ricsi', '123456', {
   host: 'localhost',
-  dialect: 'mysql',
+  dialect: 'sqlite',
 });
 
 const shoppingList = sequelize.define('scoreboard', {
@@ -15,7 +15,7 @@ const shoppingList = sequelize.define('scoreboard', {
       len: [3, 255],
     },
   },
-  property: {
+  properties: {
     type: Sequelize.TEXT,
     validate: {
       notEmpty: true,

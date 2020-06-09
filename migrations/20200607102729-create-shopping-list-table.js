@@ -11,7 +11,7 @@ module.exports = {
       product: {
         type: Sequelize.STRING
       },
-      property: {
+      properties: {
         type: Sequelize.STRING
       },
       createdAt: {
